@@ -1,0 +1,72 @@
+/* Copied from root styles.css for static deployment */
+/* If you modify root styles later, sync here if needed */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* (Truncated for brevity in explanation - copy full original styles if you want exact match) */
+
+/* For full fidelity, you may want to paste the entire original stylesheet here. */
+
+:root { --dark-navy:#0a192f; --navy:#112240; --light-navy:#1d2e4e; --lightest-navy:#233554; --navy-shadow:rgba(2,12,27,.7); --slate:#8892b0; --light-slate:#a8b2d1; --lightest-slate:#ccd6f6; --white:#e6f1ff; --green:#64ffda; --bright-green:#12ffc4; --green-tint:rgba(100,255,218,.1); --green-glow:rgba(100,255,218,.3); --light-bg:#f8fafc; --light-primary:#ffffff; --light-secondary:#f1f5f9; --light-text:#334155; --light-text-secondary:#64748b; --light-accent:#5b21b6; --light-accent-secondary:#8b5cf6; --light-accent-tint:rgba(91,33,182,.1); --light-accent-glow:rgba(91,33,182,.15); --light-shadow:rgba(91,33,182,.06); --light-border:#e2e8f0; --font-sans:'Space Grotesk','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif; --transition:all .25s cubic-bezier(.645,.045,.355,1); --border-radius:4px; --fz-xxs:12px; --fz-xs:13px; --fz-sm:14px; --fz-md:16px; --fz-lg:18px; --fz-xl:20px; --fz-xxl:22px; --fz-heading:28px; --bg-color:var(--dark-navy); --text-color:var(--slate); --heading-color:var(--lightest-slate); --accent-color:var(--green); --shadow-color:var(--navy-shadow); --hover-color:var(--green-tint); }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background-color:var(--bg-color);color:var(--text-color);font-family:var(--font-sans);font-size:var(--fz-md);line-height:1.5;overflow-x:hidden;transition:background-color .3s ease,color .3s ease}
+body.light-theme{--bg-color:var(--light-bg);--text-color:var(--light-text);--heading-color:var(--light-text);--accent-color:var(--light-accent);--shadow-color:var(--light-shadow);--hover-color:var(--light-accent-tint);color-scheme:light}
+.bg-glow{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;background:radial-gradient(circle at var(--cursor-x,50%) var(--cursor-y,50%),rgba(100,255,218,.08) 0,rgba(100,255,218,0) 60%)}
+body.light-theme .bg-glow{background:radial-gradient(circle at var(--cursor-x,50%) var(--cursor-y,50%),rgba(79,70,229,.1) 0,rgba(79,70,229,0) 60%)}
+.container{display:flex;flex-direction:column;min-height:100vh;padding:0 150px;max-width:1600px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:flex-start;padding:60px 0;width:100%;max-width:1600px;margin:0 auto}
+#particles-js{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:-1}
+.header-content{max-width:60%}
+.name{font-size:clamp(32px,8vw,60px);font-weight:700;margin:0;color:var(--heading-color);line-height:1.1;transition:var(--transition)}
+.title{font-size:clamp(18px,5vw,24px);font-weight:500;margin:10px 0 15px;color:var(--accent-color)}
+.tagline{font-size:clamp(16px,4vw,20px);margin-bottom:30px;max-width:540px}
+nav{position:fixed;top:50%;right:40px;transform:translateY(-50%);z-index:101;background-color:rgba(17,34,64,.85);backdrop-filter:blur(12px);padding:15px;border-radius:10px;box-shadow:0 0 30px var(--shadow-color);border:none}
+nav ul{list-style:none;display:flex;flex-direction:column;gap:10px;width:200px}
+.nav-item{position:relative;width:100%;height:50px;display:flex;align-items:center;justify-content:flex-start;padding:0 15px;border-radius:8px;background-color:rgba(17,34,64,.8);border-left:3px solid transparent;transition:var(--transition);overflow:hidden}
+.nav-item:hover,.nav-item.active{border-left-color:var(--accent-color);background-color:rgba(17,34,64,.95)}
+.nav-item a{display:flex;align-items:center;color:var(--light-slate);width:100%;height:100%;text-decoration:none}
+.nav-number{color:var(--accent-color);font-size:14px;font-weight:600;margin-right:10px}
+main{flex:1}
+section{margin-bottom:100px}
+.about-section{max-width:70%}
+.about-content p{margin-bottom:20px;font-size:var(--fz-md);line-height:1.6;position:relative;padding-left:15px;border-left:2px solid var(--green-tint)}
+.about-content .intro{font-size:var(--fz-lg);font-weight:400;color:var(--heading-color);border-left:none;padding-left:0}
+.experience-section,.projects-section{max-width:85%}
+.experience-item,.project-item{display:flex;margin-bottom:50px}
+.experience-date{min-width:140px;font-size:.9rem}
+.experience-content{flex:1}
+.experience-title,.project-title{color:var(--heading-color);font-size:var(--fz-xl);font-weight:600;margin-bottom:10px}
+.experience-description,.project-description{margin-bottom:15px;line-height:1.6;color:var(--slate)}
+.technologies{display:flex;flex-wrap:wrap;gap:10px}
+.tech-tag{background-color:var(--lightest-navy);color:var(--light-slate);padding:5px 12px;border-radius:4px;font-size:.85rem;font-weight:500}
+.view-resume-link{margin:0 0 60px;text-align:left;max-width:85%}
+.text-link-resume{display:inline-flex;align-items:center;color:var(--green);font-size:16px;font-weight:500;position:relative;text-decoration:none}
+.view-more-projects{margin-top:50px;text-align:left;max-width:85%}
+.btn-view-archive{display:inline-flex;align-items:center;color:var(--green);font-size:16px;font-weight:500;text-decoration:none}
+footer{padding:40px 0}
+.social-links{position:fixed;left:40px;bottom:40px;display:flex;flex-direction:column;gap:15px;z-index:101;background-color:rgba(17,34,64,.85);backdrop-filter:blur(10px);padding:15px;border-radius:10px;box-shadow:0 0 30px var(--shadow-color);border:none}
+.theme-switch{position:fixed;top:20px;right:20px;z-index:102;display:flex;align-items:center;padding:10px 15px;background-color:rgba(17,34,64,.85);backdrop-filter:blur(12px);border-radius:30px;box-shadow:0 5px 15px rgba(0,0,0,.15);transition:all .3s ease}
+.switch{position:relative;display:inline-block;width:60px;height:30px}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:var(--navy);transition:.4s;border:1px solid var(--accent-color)}
+.slider:before{position:absolute;content:"";height:22px;width:22px;left:4px;bottom:3px;background-color:var(--accent-color);transition:.4s}
+input:checked + .slider{background-color:var(--light-secondary)}
+input:checked + .slider:before{transform:translateX(28px)}
+.slider.round{border-radius:34px}
+.slider.round:before{border-radius:50%}
+.animate-on-scroll{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.animate-on-scroll.animate{opacity:1;transform:translateY(0)}
+.project-item{position:relative;flex-direction:column;background-color:var(--navy);padding:25px;border-radius:var(--border-radius);transition:all .4s ease;z-index:1;cursor:pointer;margin-bottom:20px}
+.project-details-container{width:100%;max-height:0;opacity:0;overflow:hidden;transition:all .4s ease;margin-top:15px;display:flex;flex-direction:column;gap:20px}
+.project-item.expanded .project-details-container{opacity:1;max-height:500px;margin-top:25px}
+.project-screenshot{width:100%;height:240px;overflow:hidden;border-radius:8px;margin-bottom:15px}
+.project-screenshot img{width:100%;height:100%;object-fit:cover;border-radius:8px;border:1px solid var(--lightest-navy);transition:transform .3s ease}
+.project-links{display:flex;gap:15px;margin-bottom:15px}
+.project-link{display:inline-flex;align-items:center;gap:8px;color:var(--lightest-slate);font-size:var(--fz-sm);font-weight:500;padding:8px 12px;border-radius:4px;background-color:var(--light-navy);transition:all .2s ease}
+.project-full-description{color:var(--light-slate);line-height:1.6}
+.project-item::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;border-radius:var(--border-radius);transition:var(--transition);background-color:var(--green-tint);opacity:0;z-index:-1}
+.project-item:hover::before{opacity:.1}
+@media (max-width:1080px){.container{padding:0 100px}}
+@media (max-width:768px){.container{padding:0 50px}header{flex-direction:column;padding:50px 0}.header-content{max-width:100%;margin-bottom:40px}.about-section,.experience-section,.projects-section{max-width:100%}.experience-item{flex-direction:column}.experience-date{margin-bottom:10px}}
+@media (max-width:480px){.container{padding:0 25px}.name{font-size:3rem}}
