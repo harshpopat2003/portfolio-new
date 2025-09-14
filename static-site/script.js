@@ -113,77 +113,63 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!item.querySelector('.project-expanded-details')) {
             const projectTitle = item.querySelector('.project-title').textContent;
             
-            // Create detailed descriptions based on project title
+            // Create detailed descriptions based on project title in index.html
             let detailedDescription = '';
-            let projectImage = 'https://via.placeholder.com/600x400?text=Project+Screenshot';
-            
-            // Custom descriptions for different projects
-            if (projectTitle.includes('Portfolio')) {
+            let projectLinks = '';
+
+            if (projectTitle.includes('Secure Property Rental/Sale Website')) {
+                // Property platform project (provided by user)
                 detailedDescription = `
-                    <p>A modern, responsive portfolio website built from scratch using semantic HTML5, CSS3, and vanilla JavaScript. The site features:</p>
-                    <ul>
-                        <li>Responsive design that works seamlessly across all devices</li>
-                        <li>Custom cursor effects and animations for enhanced user experience</li>
-                        <li>Dark/light theme toggle with persistent user preferences</li>
-                        <li>Optimized performance with lazy loading images and minimal dependencies</li>
-                        <li>Accessibility features following WCAG guidelines</li>
-                    </ul>
-                    <p>The biggest challenge was implementing the custom theme system while maintaining a consistent visual hierarchy across both themes.</p>
+                    <p>Designed and implemented a secure property platform with FastAPI + PostgreSQL backend and Next.js/React frontend, featuring Google OAuth, role-based dashboards, advanced search, and encrypted ACID transactions with audit logging.</p>
+                    <p>Built an on-chain contract verification and escrow system using Solidity smart contracts to guarantee funds release only after post-sale checks, improving trust and reducing chargebacks.</p>
                 `;
-                projectImage = 'https://via.placeholder.com/600x400/112240/64ffda?text=Portfolio+Website';
-            } 
-            else if (projectTitle.includes('E-commerce') || projectTitle.includes('Dashboard')) {
+                projectLinks = `
+                    <div class="project-links">
+                        <a href="https://github.com/harshpopat2003/Property-Rental-Sale-Website" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                `;
+            } else if (projectTitle.includes('WikiEase - Android Mobile Application')) {
+                // Unique description for WikiEase Android app
                 detailedDescription = `
-                    <p>A comprehensive e-commerce dashboard that provides real-time analytics and inventory management. Key features include:</p>
-                    <ul>
-                        <li>Interactive data visualization with Chart.js</li>
-                        <li>Real-time sales tracking and inventory monitoring</li>
-                        <li>User authentication with role-based permissions</li>
-                        <li>Order management system with filtering and sorting</li>
-                        <li>Integration with payment gateways and shipping APIs</li>
-                    </ul>
-                    <p>This project required deep understanding of state management and optimization techniques to handle large datasets without compromising performance.</p>
+                    <p>Developed an Android app that integrates Wikipedia content with AI-powered summarization for enhanced information access.</p>
+                    <p>Built an intuitive UI for search, article details, and favorites using Kotlin and Jetpack Compose with MVVM architecture, integrating Wikipedia API and OpenAI for article summaries.</p>
+                    <p>Implemented location-based suggestions and offline caching with Room database for low-connectivity usability.</p>
                 `;
-                projectImage = 'https://via.placeholder.com/600x400/112240/64ffda?text=E-commerce+Dashboard';
-            }
-            else if (projectTitle.includes('Weather')) {
+                projectLinks = `
+                    <div class="project-links">
+                        <a href="https://github.com/harshpopat2003/WikiEase" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                `;
+            } else if (projectTitle.includes('Mood-Based Song Classifier and Recommender System')) {
+                // Unique description for Mood-Based Song Classifier and Recommender System
                 detailedDescription = `
-                    <p>A feature-rich weather application that provides accurate forecasts and weather data visualization. Built with:</p>
-                    <ul>
-                        <li>OpenWeatherMap API integration for real-time weather data</li>
-                        <li>Geolocation services to detect user's current location</li>
-                        <li>Interactive maps showing weather patterns</li>
-                        <li>7-day forecast with hourly breakdowns</li>
-                        <li>Customizable alerts for severe weather conditions</li>
-                    </ul>
-                    <p>The main challenge was optimizing API calls to maintain responsiveness while limiting usage to stay within free tier limits.</p>
+                    <p>Developed an ML pipeline using XGBoost to classify user mood from listening history (86.3% accuracy) and built a personalized music recommendation system.</p>
+                    <p>Engineered a robust preprocessing pipeline with feature engineering, selection (via Random Forest), and dimensionality reduction (PCA, t-SNE) to uncover mood clusters.</p>
+                    <p>Implemented and compared multiple models (Logistic Regression, SVM, Random Forest, Naïve Bayes, ANN, KNN), achieving 86.3% accuracy with XGBoost after hyperparameter tuning.</p>
+                    <p>Designed a novel recommendation algorithm (MASRS – Mood-Attuned Sonic Recommender System) that averages user session features, infers mood, and applies Euclidean similarity search to recommend contextually aligned songs.</p>
+                    <p>Project recognized as one of the best ML projects of the year for its innovative mood-driven personalization and strong empirical performance.</p>
                 `;
-                projectImage = 'https://via.placeholder.com/600x400/112240/64ffda?text=Weather+App';
-            }
-            else {
+                projectLinks = `
+                    <div class="project-links">
+                        <a href="https://github.com/harshpopat2003/Mood-Based-Song-Classifier-and-Recommender-System" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                `;
+            } else {
+                // Fallback description if a new project is added later
                 detailedDescription = `
-                    <p>This project showcases my skills in frontend development with a focus on user experience and clean code. Key features include:</p>
-                    <ul>
-                        <li>Modern UI/UX design principles with attention to detail</li>
-                        <li>Responsive layouts that adapt to any screen size</li>
-                        <li>Performance optimization for fast loading times</li>
-                        <li>Cross-browser compatibility and progressive enhancement</li>
-                        <li>Comprehensive documentation and maintainable code structure</li>
-                    </ul>
-                    <p>Throughout development, I focused on writing clean, maintainable code while ensuring the best possible user experience.</p>
+                    <p>Project details coming soon. This entry has a unique backend, infrastructure, and security focus with production-ready implementation details.</p>
                 `;
-                projectImage = `https://via.placeholder.com/600x400/112240/64ffda?text=${projectTitle.replace(/\s+/g, '+')}`;  
             }
             
             const detailsHTML = `
                 <div class="project-expanded-details">
-                    <div class="project-screenshot">
-                        <img src="${projectImage}" alt="${projectTitle} Screenshot">
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
+                    ${projectLinks}
                     <div class="project-full-description">
                         ${detailedDescription}
                     </div>
