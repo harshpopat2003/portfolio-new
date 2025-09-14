@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
     <meta name="description" content="AI-Enabled Backend & DevSecOps Engineer building secure, scalable systems with integrated AI capabilities.">
 </head>
 <body>
+    <!-- Background glow cursor effect -->
     <div class="bg-glow"></div>
+    
+    <!-- Page dimmer for focus effect -->
     <div class="page-dimmer"></div>
+    
+    <!-- Theme toggle switch with label -->
     <div class="theme-switch">
         <div class="theme-label">Theme</div>
         <label class="switch">
@@ -22,6 +27,8 @@
             <span class="theme-icon light"><i class="fas fa-sun"></i></span>
         </label>
     </div>
+
+    <!-- Particle background -->
     <div id="particles-js"></div>
     <div class="container">
         <header>
@@ -38,22 +45,37 @@
                 </ul>
             </nav>
         </header>
+
         <main>
             <section id="about" class="about-section">
                 <div class="about-content animate-on-scroll">
-                    <p class="intro">I have passion for building secure, scalable backend systems that integrate AI and machine learning capabilities. I bring together expertise in cloud infrastructure, DevOps automation, and cybersecurity to deliver high-performance applications. From designing intelligent APIs to managing CI/CD pipelines and securing deployments, I thrive at the intersection of backend development, AI integration, and secure DevOps practices.</p>
-                    <p class="current-role">Currently, I’m a Backend Engineer at Adden.AI, where I design and build scalable, ML-powered systems using large language models. This role has deepened my expertise in distributed system design, real-time data processing, and integrating machine learning models into production workflows. I’ve worked extensively on performance optimization, API design, and infrastructure scaling, while collaborating across teams to deliver reliable, AI-driven products that handle complex ad tech data and logic at scale.</p>
-                    <p class="past-experience">At MIDAS Lab, I gained hands-on experience fine-tuning large multimodal models and building end-to-end AI applications using frameworks like LangChain, ChromaDB, and LLaVA. I developed strong skills in dataset design, model evaluation, and prompt engineering for scientific reasoning, while deepening my understanding of error analysis in LLMs, collaborative research, and publishing in top-tier conferences such as IEEE and AAAI.</p>
-                    <p class="personal">Outside of work, I enjoy hitting the gym, playing volleyball, jamming on my guitar, gaming, and getting lost in books and movies.</p>
+                    <p class="intro">
+                        I have passion for building secure, scalable backend systems that integrate AI and machine learning capabilities. I bring together expertise in cloud infrastructure, DevOps automation, and cybersecurity to deliver high-performance applications. From designing intelligent APIs to managing CI/CD pipelines and securing deployments, I thrive at the intersection of backend development, AI integration, and secure DevOps practices.
+                    </p>
+
+                    <p class="current-role">
+                        Currently, I’m a Backend Engineer at Adden.AI, where I design and build scalable, ML-powered systems using large language models. This role has deepened my expertise in distributed system design, real-time data processing, and integrating machine learning models into production workflows. I’ve worked extensively on performance optimization, API design, and infrastructure scaling, while collaborating across teams to deliver reliable, AI-driven products that handle complex ad tech data and logic at scale.
+                    </p>
+
+                    <p class="past-experience">
+                        At MIDAS Lab, I gained hands-on experience fine-tuning large multimodal models and building end-to-end AI applications using frameworks like LangChain, ChromaDB, and LLaVA. I developed strong skills in dataset design, model evaluation, and prompt engineering for scientific reasoning, while deepening my understanding of error analysis in LLMs, collaborative research, and publishing in top-tier conferences such as IEEE and AAAI.
+                    </p>
+
+                    <p class="personal">
+                        Outside of work, I enjoy hitting the gym, playing volleyball, jamming on my guitar, gaming, and getting lost in books and movies.
+                    </p>
                 </div>
             </section>
+
             <section id="experience" class="experience-section">
                 <div class="experience-item animate-on-scroll">
                     <div class="experience-date">2024 — PRESENT</div>
                     <div class="experience-content">
                         <h3 class="experience-title">Backend Engineer - Industrial · <span class="company">Adden.AI</span> <a href="https://www.adden.ai/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt external-link"></i></a></h3>
                         <div class="date">May 2024 — Present</div>
-                        <p class="experience-description">Design and develop intelligent, scalable backend systems powered by LLMs and machine learning. Built Reporting AI to automate multi-platform ad reporting with real-time dashboards and KPI tracking. Developed Smart Audience AI for predictive audience targeting using deep neural networks and multi-source data analysis. Created Monitoring AI to provide real-time anomaly detection, alerts, and AI-driven root-cause analysis for campaign performance. Engineered Budget AI to reduce advertising cost-per-response by dynamically reallocating spend based on performance insights. Built Custom Audience AI to enhance lead quality and conversion rates by activating enriched contact data for pre-outreach ad delivery.</p>
+                        <p class="experience-description">
+                            Design and develop intelligent, scalable backend systems powered by LLMs and machine learning. Built Reporting AI to automate multi-platform ad reporting with real-time dashboards and KPI tracking. Developed Smart Audience AI for predictive audience targeting using deep neural networks and multi-source data analysis. Created Monitoring AI to provide real-time anomaly detection, alerts, and AI-driven root-cause analysis for campaign performance. Engineered Budget AI to reduce advertising cost-per-response by dynamically reallocating spend based on performance insights. Built Custom Audience AI to enhance lead quality and conversion rates by activating enriched contact data for pre-outreach ad delivery.
+                        </p>
                         <div class="technologies">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">FastAPI</span>
@@ -67,12 +89,17 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="experience-item animate-on-scroll">
                     <div class="experience-date">2024 — 2024</div>
                     <div class="experience-content">
                         <h3 class="experience-title">Undergraduate Research Intern - Research · <span class="company">MIDAS</span> <a href="https://midas.iiitd.ac.in/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt external-link"></i></a></h3>
                         <div class="date">May 2024 — Dec 2024</div>
-                        <p class="experience-description">Developed an end-to-end voice chatbot which transcribed audio, generated embeddings with LangChain, stored in ChromaDB, processed inquiries and converted back to speech for seamless user interaction.<br><br>Introduced and created GeoVQA, a multimodal math dataset, to enhance LLMs capabilities in geometry. Fine-tuned LLaVA models, achieving superior performance over GPT-4 on the PGPS9K benchmark.<br><br>We proposed MoRA, a framework that uses GPT-4o to iteratively fix comprehension, conceptual, and calculation errors in LLMs, boosting Llama-3-70B accuracy by up to 16% on benchmarks like SciEval, MMLU, and PhysicsQA.</p>
+                        <p class="experience-description">
+                            Developed an end-to-end voice chatbot which transcribed audio, generated embeddings with LangChain, stored in ChromaDB, processed inquiries and converted back to speech for seamless user interaction.<br><br>
+                            Introduced and created GeoVQA, a multimodal math dataset, to enhance LLMs capabilities in geometry. Fine-tuned LLaVA models, achieving superior performance over GPT-4 on the PGPS9K benchmark.<br><br>
+                            We proposed MoRA, a framework that uses GPT-4o to iteratively fix comprehension, conceptual, and calculation errors in LLMs, boosting Llama-3-70B accuracy by up to 16% on benchmarks like SciEval, MMLU, and PhysicsQA.
+                        </p>
                         <div class="technologies">
                             <span class="tech-tag">Tensorflow</span>
                             <span class="tech-tag">Pytorch</span>
@@ -84,14 +111,20 @@
                         </div>
                     </div>
                 </div>
+
+
             </section>
+            
             <div class="view-resume-link">
                 <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="text-link-resume">View Full Résumé <i class="fas fa-arrow-right"></i></a>
             </div>
+
             <section id="projects" class="projects-section">
                 <div class="project-item animate-on-scroll">
                     <h3 class="project-title">AI-Powered Threat Detection System</h3>
-                    <p class="project-description">A scalable backend system that uses machine learning algorithms to detect security threats in real-time across distributed cloud environments. Implemented with a microservices architecture and containerized deployment.</p>
+                    <p class="project-description">
+                        A scalable backend system that uses machine learning algorithms to detect security threats in real-time across distributed cloud environments. Implemented with a microservices architecture and containerized deployment.
+                    </p>
                     <div class="technologies">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">FastAPI</span>
@@ -101,9 +134,12 @@
                         <span class="tech-tag">Redis</span>
                     </div>
                 </div>
+
                 <div class="project-item animate-on-scroll">
                     <h3 class="project-title">Automated Security Compliance Platform</h3>
-                    <p class="project-description">A platform that automates security compliance checks across multi-cloud environments using infrastructure as code. Features custom policy enforcement, remediation workflows, and comprehensive reporting dashboards.</p>
+                    <p class="project-description">
+                        A platform that automates security compliance checks across multi-cloud environments using infrastructure as code. Features custom policy enforcement, remediation workflows, and comprehensive reporting dashboards.
+                    </p>
                     <div class="technologies">
                         <span class="tech-tag">Terraform</span>
                         <span class="tech-tag">Go</span>
@@ -113,9 +149,12 @@
                         <span class="tech-tag">Grafana</span>
                     </div>
                 </div>
+
                 <div class="project-item animate-on-scroll">
                     <h3 class="project-title">ML-Powered API Gateway</h3>
-                    <p class="project-description">A secure API gateway with integrated machine learning for intelligent request routing, automatic rate limiting, and anomaly detection. Includes real-time monitoring and adaptive security controls.</p>
+                    <p class="project-description">
+                        A secure API gateway with integrated machine learning for intelligent request routing, automatic rate limiting, and anomaly detection. Includes real-time monitoring and adaptive security controls.
+                    </p>
                     <div class="technologies">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">FastAPI</span>
@@ -130,6 +169,7 @@
                 </div>
             </section>
         </main>
+
         <footer>
             <div class="social-links">
                 <a href="https://github.com/harshpopat2003" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
@@ -141,10 +181,87 @@
             <p class="credits">Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with HTML, CSS, and JavaScript.</p>
         </footer>
     </div>
+
+        <!-- Custom cursor elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+    <div class="cursor-glow-outer"></div>
+
+    <!-- Particles.js for background effect -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            particlesJS("particles-js", {"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},"color":{"value":"#64ffda"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"}},"opacity":{"value":0.2,"random":true},"size":{"value":3,"random":true},"line_linked":{"enable":true,"distance":150,"color":"#233554","opacity":0.2,"width":1},"move":{"enable":true,"speed":0.5,"direction":"none","random":true,"out_mode":"out","bounce":false}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"bubble":{"distance":150,"size":4,"duration":2,"opacity":0.5,"speed":3},"push":{"particles_nb":4}}},"retina_detect":true});
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 50,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#64ffda"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                    },
+                    "opacity": {
+                        "value": 0.2,
+                        "random": true,
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#233554",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 0.5,
+                        "direction": "none",
+                        "random": true,
+                        "out_mode": "out",
+                        "bounce": false,
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "bubble": {
+                            "distance": 150,
+                            "size": 4,
+                            "duration": 2,
+                            "opacity": 0.5,
+                            "speed": 3
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                    }
+                },
+                "retina_detect": true
+            });
         });
     </script>
     <script src="script.js"></script>
